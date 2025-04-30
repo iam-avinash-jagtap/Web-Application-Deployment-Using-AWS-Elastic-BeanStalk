@@ -1,4 +1,4 @@
-# 🌐 Techaj Python Logging App Deployment on AWS Elastic Beanstalk
+# 🌐 Python App Deployment on AWS Elastic Beanstalk.
 The Techaj Python Logging App is a lightweight web application deployed on AWS Elastic Beanstalk. It demonstrates how to use a Python WSGI app with structured logging, IAM roles, and S3-based deployment. The app responds with a custom HTML page and logs incoming POST requests, making it ideal for learning cloud deployment basics with real-world scenarios.
 
 ## 📦 Prerequisites ✅
@@ -49,6 +49,8 @@ _ IAM Role is required for Elastic Beanstalk to manage EC2 and other services._
 - Name the role: `Instance-profile-EBS-role`  
 - ✅ Click **Create role**  
 
+![IAM-Role](https://github.com/iam-avinash-jagtap/Web-Application-Deployment-Using-AWS-Elastic-BeanStalk/blob/master/Images/Screenshot%202025-04-30%20180234.png)
+
 ---
 
 ### 3️⃣ Open Elastic Beanstalk Console 🌿
@@ -76,8 +78,11 @@ _ IAM Role is required for Elastic Beanstalk to manage EC2 and other services._
   - ✅ Choose **Upload your code**  
   - Upload your **ZIP file**  
   - Or select **Get code from S3**:
-    - Upload your ZIP to an **S3 Bucket**  
-    - Paste the full **S3 URI**  
+    - Upload your ZIP to an **S3 Bucket** 
+  
+![S3-Bucket](https://github.com/iam-avinash-jagtap/Web-Application-Deployment-Using-AWS-Elastic-BeanStalk/blob/master/Images/Screenshot%202025-04-30%20180600.png)
+
+  - Paste the full **S3 URI**  
 - Instance settings:
   - Environment name: `Python-App-Env`  
   - Domain: auto-generated (e.g., `python-app-env.eba-xyz123.elasticbeanstalk.com`)  
@@ -85,7 +90,7 @@ _ IAM Role is required for Elastic Beanstalk to manage EC2 and other services._
 
 ---
 
-### 6️⃣ Configure More Options ⚙️ (Optional)
+### 6️⃣ Configure More Options ⚙️
 
 - Under **Configure more options**:
   - **Instances**:
@@ -114,12 +119,17 @@ You’ll see:
 - 🎉 Health: **Green**  
 - 🌐 Domain: `http://python-app-env.eba-xyz123.elasticbeanstalk.com`  
 
+![ENV](https://github.com/iam-avinash-jagtap/Web-Application-Deployment-Using-AWS-Elastic-BeanStalk/blob/master/Images/Screenshot%202025-04-30%20180726.png)
+
 ---
 
 ### 8️⃣ Test Your Application 🧪
 
 - Visit the app’s domain URL  
 - You should see your **Techaj-branded HTML page**  
+
+![Output](https://github.com/iam-avinash-jagtap/Web-Application-Deployment-Using-AWS-Elastic-BeanStalk/blob/master/Images/Screenshot%202025-04-30%20180045.png)
+
 - POST requests to `/` and `/scheduled` will trigger logging  
 - Logs are stored at `/tmp/sample-app.log` on the EC2 instance  
 
