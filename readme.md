@@ -134,5 +134,11 @@ You’ll see:
 - Logs are stored at `/tmp/sample-app.log` on the EC2 instance  
 
 ---
+### 9️⃣ (Optional) Use Auto Scaling Group for High Availability
+
+Select “Load Balanced + Auto Scaling” instead of a single instance during environment creation.
+
+This ensures better uptime, automatic instance recovery, and efficient traffic distribution for production-ready apps.
+---
 ## Summary
 This project, Techaj Python Logging App, showcases the deployment of a simple Python WSGI web application on AWS Elastic Beanstalk. It includes structured logging using Python's RotatingFileHandler and serves a custom HTML response on the root path. The app handles POST requests for logging and simulates task scheduling with log capture. IAM instance profile roles are configured to securely allow Elastic Beanstalk access to EC2 and other resources. The application is deployed via a ZIP file or S3 bucket, runs on a single EC2 instance, and is accessible through a public Elastic Beanstalk domain. This project serves as a practical guide to deploying and managing Python apps on AWS.
